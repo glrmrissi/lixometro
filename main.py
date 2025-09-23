@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 times_do_lixo = {
     0: "Times: @financeiro e @atendimento",
     1: "Time: @paralegal",
-    2: "Times: @dev e @produto,
+    2: "Times: @dev e @produto",
     3: "Times: @comercial e @marketing",
     4: "Time: @operacional"
 }
