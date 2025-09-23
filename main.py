@@ -17,11 +17,11 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 # Dicionário com os times por dia da semana
 # Segunda = 0 ... Domingo = 6
 times_do_lixo = {
-    0: "Times: @financeiro e @atendimento",
-    1: "Time: @paralegal",
-    2: "Times: @dev e @produto",
-    3: "Times: @comercial e @marketing",
-    4: "Time: @operacional"
+    0: "Times: <@&ID_DO_ROLE_FINANCEIRO> e <@&ID_DO_ROLE_ATENDIMENTO>",
+    1: "Time: <@&ID_DO_ROLE_PARALEGAL>",
+    2: "Times: <@&ID_DO_ROLE_DEV> e <@&ID_DO_ROLE_PRODUTO>",
+    3: "Times: <@&ID_DO_ROLE_COMERCIAL> e <@&ID_DO_ROLE_MARKETING>",
+    4: "Time: <@&ID_DO_ROLE_OPERACIONAL>"
 }
 
 async def enviar_lembrete():
