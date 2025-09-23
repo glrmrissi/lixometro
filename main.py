@@ -17,11 +17,11 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 # Dicionário com os times por dia da semana
 # Segunda = 0 ... Domingo = 6
 times_do_lixo = {
-    0: "Times: **Financeiro** e **Atendimento**",
-    1: "Time: **Paralegal**",
-    2: "Times: **Devs** e **Produtos**",
-    3: "Times: **Comercial** e **Marketing**",
-    4: "Time: **Operacional**"
+    0: "Times: @financeiro e @atendimento",
+    1: "Time: @paralegal",
+    2: "Times: @dev e @produto,
+    3: "Times: @comercial e @marketing",
+    4: "Time: @operacional"
 }
 
 async def enviar_lembrete():
@@ -36,7 +36,7 @@ async def enviar_lembrete():
 async def checar_horario():
     agora = datetime.datetime.now(TZ)
     # Verifica se é 13:30
-    if agora.hour == 13 and agora.minute == 30:
+    if agora.hour == 9 and agora.minute == 00:
         await enviar_lembrete()
 
 @bot.event
