@@ -38,16 +38,24 @@ times_do_lixo = {
 async def enviar_lembrete():
     canal = bot.get_channel(CANAL_ID)
     hoje = datetime.datetime.now(TZ).weekday()
-    if hoje in times_do_lixo:  # Só envia se for dia útil
-        await canal.send(
-            f"🗑️ Olá! Hoje é dia de recolher o lixo às **13:30**.\nResponsáveis: {times_do_lixo[hoje]}"
+    if hoje in times_do_lixo:
+        embed = discord.Embed(
+            title="🗑️ Lembrete de Lixo",
+            description=(
+                f"Hoje é dia de recolher o lixo às **13:30**.\n\n"
+                f"Responsáveis: {times_do_lixo[hoje]}"
+            ),
+            color=discord.Color.green()
         )
+        embed.set_image(url="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic2683012_0.webp?w=760&h=507")
+
+        await canal.send(embed=embed)
 
 @tasks.loop(minutes=1)
 async def checar_horario():
     agora = datetime.datetime.now(TZ)
     # Verifica se é 13:30
-    if agora.hour == 9 and agora.minute == 15:
+    if agora.hour == 9 and agora.minute == 21:
         await enviar_lembrete()
 
 @bot.event
