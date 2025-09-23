@@ -36,7 +36,7 @@ times_do_lixo = {
 }
 
 imagens_do_lixo = {
-    0: "https://scontent.fldb1-1.fna.fbcdn.net/v/t39.30808-6/500763396_1273374077677667_4743661265555671894_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=xN2ndkmh-F0Q7kNvwFrdr_D&_nc_oc=AdlISTXnmMCzzLtetNz0gukPLHqDGFTIDBJWCm_aO4cmRonXNS-B6P3X61kKsPq9Cuo&_nc_zt=23&_nc_ht=scontent.fldb1-1.fna&_nc_gid=uXKk0qcrgn5wSy-GtJMMLA&oh=00_AfYfXuwh1RNay8J8Xt2YYOXqE9FWRDN1EzAfLlv3z-9ivw&oe=68D84CC2",   # Segunda
+    0: "https://ocp.news/wp-content/uploads/2025/04/CORO.jpg",   # Segunda
     1: "https://super.abril.com.br/wp-content/uploads/2017/03/preto-no-branco-a-explicac3a7c3a3o-cientc3adfica-para-as-cores-do-panda.png?crop=1&resize=1212,909",    # Terça
     2: "https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic2683012_0.webp?w=760&h=507",          # Quarta
     3: "https://i.imgur.com/comercial.png",    # Quinta
@@ -67,7 +67,7 @@ async def enviar_lembrete():
 async def checar_horario():
     agora = datetime.datetime.now(TZ)
     # Verifica se é 13:30
-    if agora.hour == 9 and agora.minute == 21:
+    if agora.hour == 9 and agora.minute == 36:
         await enviar_lembrete()
 
 @bot.event
