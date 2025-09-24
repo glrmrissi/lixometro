@@ -17,20 +17,21 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 # Dicionário com os times por dia da semana
 # Segunda = 0 ... Domingo = 6
 roles = {
-    "financeiro": 111111111111111111,
-    "atendimento": 222222222222222222,
-    "paralegal": 1420016287651860522,
-    "dev": 444444444444444444,
-    "produto": 555555555555555555,
-    "comercial": 666666666666666666,
-    "marketing": 777777777777777777,
-    "operacional": 888888888888888888,
+    "financeiro": 1142089190050365510,
+    "atendimento": 1255507654436978878,
+    "paralegal": 1142114484819865742,
+    "dev": 1142088423390326934,
+    "produto": 1313606989456084992,
+    "cs": 1318209546820391013,
+    "comercial": 1142089078947446856,
+    "marketing": 1142088996105756712,
+    "operacional": 1142088914253910117,
 }
 
 times_do_lixo = {
     0: f"Times: <@&{roles['financeiro']}> e <@&{roles['atendimento']}>",
     1: f"Time: <@&{roles['paralegal']}>",
-    2: f"Times: <@&{roles['dev']}> e <@&{roles['produto']}>",
+    2: f"Times: <@&{roles['dev']}>, <@&{roles['produto']}> e <@&{roles['cs']}>",
     3: f"Times: <@&{roles['comercial']}> e <@&{roles['marketing']}>",
     4: f"Time: <@&{roles['operacional']}>",
 }
@@ -39,8 +40,8 @@ imagens_do_lixo = {
     0: "https://ocp.news/wp-content/uploads/2025/04/CORO.jpg",   # Segunda
     1: "https://super.abril.com.br/wp-content/uploads/2017/03/preto-no-branco-a-explicac3a7c3a3o-cientc3adfica-para-as-cores-do-panda.png?crop=1&resize=1212,909",    # Terça
     2: "https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic2683012_0.webp?w=760&h=507",          # Quarta
-    3: "https://i.imgur.com/comercial.png",    # Quinta
-    4: "https://i.imgur.com/operacional.png",  # Sexta
+    3: "https://static.ndmais.com.br/2021/12/lagarto-teiu.jpg",    # Quinta
+    4: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFH9G93CHQUJBFhUdhYu-HZpd9tlpLLQtqwQ&s",  # Sexta
 }
 
 async def enviar_lembrete():
@@ -53,7 +54,7 @@ async def enviar_lembrete():
                 f"Hoje é dia de recolher o lixo às **13:30**.\n\n"
                 f"Responsáveis: {times_do_lixo[hoje]}"
             ),
-            color=discord.Color.green()
+            color=discord.Color.dark_purple()
         )
 
         # Só adiciona imagem se tiver para o dia
