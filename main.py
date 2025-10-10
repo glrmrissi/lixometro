@@ -57,12 +57,6 @@ async def enviar_lembrete():
             color=discord.Color.dark_purple()
         )
 
-        # Só adiciona imagem se tiver para o dia
-        if hoje in imagens_do_lixo:
-            embed.set_image(url=imagens_do_lixo[hoje])
-
-        await canal.send(embed=embed)
-
 
 @tasks.loop(minutes=1)
 async def checar_horario():
