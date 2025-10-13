@@ -62,7 +62,7 @@ async def enviar_lembrete():
 async def checar_horario():
     agora = datetime.datetime.now(TZ)
     # Verifica se é 13:30
-    if agora.hour == 15 and agora.minute == 10:
+    if agora.hour == 15 and agora.minute == 20:
         await enviar_lembrete()
 
 @bot.event
