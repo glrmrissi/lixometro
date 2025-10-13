@@ -29,11 +29,11 @@ roles = {
 }
 
 times_do_lixo = {
-    0: f"Times: **Financeiro** e **Atendimento**",
-    1: f"Time: **Paralegal**",
-    2: f"Times: **Dev**, **Produto** e **Cs**",
-    3: f"Times: **Comercial** e **Marketing**",
-    4: f"Time: **Operacional**",
+   0: f"Times: <@&{roles['financeiro']}> e <@&{roles['atendimento']}>",
+    1: f"Time: <@&{roles['paralegal']}>",
+    2: f"Times: <@&{roles['dev']}>, <@&{roles['produto']}> e <@&{roles['cs']}>",
+    3: f"Times: <@&{roles['comercial']}> e <@&{roles['marketing']}>",
+    4: f"Time: <@&{roles['operacional']}>",
 }
 
 imagens_do_lixo = {
@@ -62,7 +62,7 @@ async def enviar_lembrete():
 async def checar_horario():
     agora = datetime.datetime.now(TZ)
     # Verifica se é 13:30
-    if agora.hour == 13 and agora.minute == 30:
+    if agora.hour == 15 and agora.minute == 10:
         await enviar_lembrete()
 
 @bot.event
